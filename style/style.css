@@ -1,0 +1,122 @@
+/* Creating a root folder with basic styles, for easy reusability */
+:root {
+  --font: Verdana, sans-serif;
+
+  --white: #fff;
+  --light-green: #d5ecd4;
+  --dark-green: #2f5233;
+  --light-brown: #f5f1e3;
+  --onyx: #3e3e3e;
+  --orange: #ed8938;
+
+}
+
+*{
+    /* reset of some predefined values */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+}
+
+/* content containers */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/*Setting the font-sizes and colors for the headings and APA.*/
+  h1 {
+    font-size: 3.75rem;
+    color: var(--dark-green);
+  }
+  h2 {
+    font-size: 2.5rem;
+    color: var(--dark-green);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+  }
+  
+  h5 {
+    color: var(--dark-green);
+  }
+
+  .apa {
+    font-size: 0.5rem;
+  }
+
+/* defining our buttons */
+button{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 0.5rem 0;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: var(--orange) 0px 0px 2px !important;
+    
+    /* dark button for light backgrounds */
+    &.dark-button{
+      color: var(--light-green);
+      background-color: var(--dark-green);
+      &:hover{
+        background-color: var(--light-brown);
+        color: var(--dark-green);
+    }
+    }
+
+    /* light button for dark backgrounds */
+    &.light-button{
+      color: var(--dark-green);
+      background-color: var(--light-green);
+      &:hover{
+        color: var(--dark-green);
+        background-color: var(--light-brown);
+        border: var(--light-green) 1px solid;
+        box-shadow: var(--orange) 2px 2px 2px;
+      }
+    }
+
+    
+}
+
+a {
+            display: block;
+
+            &:hover {
+                background-color: rgba(47, 82, 51, 0.1);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+/* every section is below the other */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* to make sure if a page is not completely filled header and footer are corectly placed */
+html{
+  height: 100%;
+}
+
+main{
+  flex: 1;
+}
+
