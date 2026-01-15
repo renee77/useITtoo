@@ -37,4 +37,5 @@
         <p> © 2025, useITall. Alle rechten voorbehouden.</p>
     </div>
 </footer>
+<script src="<?= BASE_URL ?>/script/script.js"></script>
 </body>

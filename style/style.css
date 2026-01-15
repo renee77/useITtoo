@@ -60,15 +60,12 @@ h5 {
 
 /* defining our buttons */
 button {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  display: block;
-  margin: 0.5rem 0;
   padding: 5px 20px;
   border-radius: 5px;
-
-
-
 
   /* dark button for light backgrounds */
   &.dark-button {

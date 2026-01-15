@@ -109,22 +109,34 @@ section {
                 color: var(--dark-green);
 
                 div#order {
-                    display: flex;
+                    display: inline-flex;
+                    align-items: center;
 
                     div.quantity {
-                        display: flex;
+                        display: inline-flex;
+                        align-items: stretch;
+                        border: 2px solid var(--dark-green);
+                        border-radius: 5px;
+                        overflow: hidden;
+                        padding: 0;
+                        height: 2.2rem;
 
                         input#qty {
+                            appearance: textfield;
+                            border: none;
                             width: 3rem;
-                            height: 3rem;
-                            padding: 5px 0;
-                            margin: 0.5rem 0;
+                            text-align: center;
+                            font-size: 1.4rem;
+                            line-height: 2.5rem;
+                            height: 100%;
+
                         }
                     }
 
                     button {
                         display: flex;
                         align-items: center;
+
 
                         &.shoppingcar {
                             margin-left: 2rem;

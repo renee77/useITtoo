@@ -23,9 +23,9 @@
                 <input type="text" placeholder="Search....">
             </div>
             <div id="login">
-                <button class="light-button login" aria-label="Log in bij je account">Login</button>
                 <img src="<?= BASE_URL ?>/images/login-logo.png" id="loginLogo"
                     alt="login logo">
+                <button class="light-button login" aria-label="Log in bij je account">Login</button>
                 <img src="<?= BASE_URL ?>/images/winkelwagen-lichtgroen.png" id="winkelwagenLogo"
                     alt="winkelwagen logo">
             </div>
