@@ -24,8 +24,10 @@
             </div>
             <div id="login">
                 <button class="light-button login" aria-label="Log in bij je account">Login</button>
-                <img src="<?= BASE_URL ?>/images/account_circle_50dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" id="loginLogo"
+                <img src="<?= BASE_URL ?>/images/login-logo.png" id="loginLogo"
                     alt="login logo">
+                <img src="<?= BASE_URL ?>/images/winkelwagen-lichtgroen.png" id="winkelwagenLogo"
+                    alt="winkelwagen logo">
             </div>
         </div>
 
