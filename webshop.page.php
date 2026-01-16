@@ -1,7 +1,7 @@
 <?php
 // always  create a main path above each file 
 require_once __DIR__ . '/inc/variables.inc.php';   // waar BASE_PATH/BASE_URL staan
-require_once BASE_PATH . '/views/header.php';
+require_once BASE_PATH . '/views/header.view.php';
 require_once BASE_PATH . '/inc/functions.inc.php';
 require_once BASE_PATH . '/inc/variables.inc.php';
 ?>
@@ -37,4 +37,4 @@ require_once BASE_PATH . '/inc/variables.inc.php';
 </section>
 
 
-<?php require_once BASE_PATH . '/views/footer.php'; ?>
+<?php require_once BASE_PATH . '/views/footer.view.php'; ?>

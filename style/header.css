@@ -1,52 +1,42 @@
-header{
+header {
     width: 100%;
     background-color: var(--dark-green);
     padding: 2rem;
-     
+
     .header {
-      height: 100%;
-      display: grid;
-      grid-template-columns: 0.5fr 2fr 0.5fr;
-      gap: 10px;
-      align-items: center;
-      
+        height: 100%;
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        gap: 10px;
+        align-items: center;
 
-      nav{
-        a {
-            img {
-                width: 100px;
-                height: auto;
 
+        div#search {
+            input[type="text"] {
+                width: 100%;
+                height: 2rem;
+                padding: 6px;
+                border-radius: 5px;
+                border: none;
             }
         }
-      }
 
-      div#search{
-        input[type="text"] {
-            width: 100%;
-            height: 2rem;
-            padding: 6px;
-            border-radius: 5px;
-            border: none;
-            }
-      }
-      
-      div#login {
+        div#login {
             display: flex;
             justify-content: space-around;
             align-items: center;
 
-            button{
+            button {
                 height: 2rem;
             }
 
-            img{
+            img {
                 margin: 0.5rem;
                 width: 3rem;
             }
 
-    }
+        }
 
-        
+
     }
 }

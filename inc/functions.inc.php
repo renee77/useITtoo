@@ -15,7 +15,7 @@ function renderProductSection(string $categorie, array $products, string $arrayN
         echo '<div class="product ' . $productName . '">';
 
         // url for link with get parameters to product page
-        $url = BASE_URL . '/product.page.php?' . http_build_query([
+        $url = BASE_URL . '/views/product.page.php?' . http_build_query([
             'product' => $productName,
             'source' => $arrayName
         ]);
