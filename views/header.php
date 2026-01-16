@@ -15,7 +15,7 @@
     <header>
         <div class="header container">
             <nav>
-                <a href="<?= BASE_URL ?>/webshop.php" class="logo-link"><img src="<?= BASE_URL ?>/images/licht-logo.png" class="logo"
+                <a href="<?= BASE_URL ?>/webshop.page.php" class="logo-link"><img src="<?= BASE_URL ?>/images/licht-logo.png" class="logo"
                         alt="logo van useITtoo"></a>
             </nav>
 

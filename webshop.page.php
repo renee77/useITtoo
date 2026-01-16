@@ -1,8 +1,6 @@
 <?php
 // always  create a main path above each file 
-define('BASE_PATH', __DIR__); // = path to  ~/htdocs/backend
-define('BASE_URL', '/backend'); // URL-path as you use it in your webbrowser, this is the project directory probably in htdocs (xamp)
-
+require_once __DIR__ . '/inc/variables.inc.php';   // waar BASE_PATH/BASE_URL staan
 require_once BASE_PATH . '/views/header.php';
 require_once BASE_PATH . '/inc/functions.inc.php';
 require_once BASE_PATH . '/inc/variables.inc.php';

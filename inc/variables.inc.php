@@ -1,4 +1,7 @@
 <?php
+define('BASE_PATH', dirname(__DIR__)); // = path to  ~/htdocs/backend
+define('BASE_URL', '/backend'); // URL-path as you use it in your webbrowser, this is the project directory probably in htdocs (xamp)
+
 
 // !!! dont forget to add a new products categorie array to allowedSources !!
 
