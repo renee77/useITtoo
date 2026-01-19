@@ -23,6 +23,11 @@ class OrderRow
         $this->quantity = $quantity;
     }
 
+    public function getProduct(): Product
+    {
+        return $this->product;
+    }
+
     // methodes
     public function getOrderTotal(): float
     {

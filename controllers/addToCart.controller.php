@@ -26,22 +26,13 @@ require_once BASE_PATH . '/inc/functions.inc.php';
 
 // Input ophalen en valideren
 $name     = $_POST['name']     ?? '';
-$imageUrl = $_POST[e('imageUrl')] ?? null;
-$priceRaw = $_POST['price']    ?? ''; // string van de browser
+$imageUrl = $_POST['imageUrl'] ?? null;
 $quantityRaw   = $_POST['quantity'] ?? '1'; // string van de browser
 
 
 // $_POST['price'] en dus $priceRaw zijn in eerste instantie altijd een string; 
 // PHP zet form‑data niet automatisch om naar getallen
 // In het formulier stuur je bijvoorbeeld value="1.50" → dat komt in PHP binnen als "1.50" (string)
-
-// price to float
-$price    = filter_var($priceRaw, FILTER_VALIDATE_FLOAT);
-
-if ($price === false) {
-    // geen geldig getal binnengekomen // Foutafhandeling: ongeldige prijs
-    die('Ongeldige prijs.'); // zelfde als exit(), Veel developers gebruiken die bij fouten en En gebruiken exit voor “normale” beëindiging, b.v. na een redirect of na succesvol afronden van een script
-}
 
 // later wordt hier ook getoetst of het niet meer dan voorraad is of het max aantal stuks dat we willen verkopen
 $quantity = filter_var($quantityRaw, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]); //quantity wordt gecontroleerd met FILTER_VALIDATE_INT en een min_range, zodat het een positieve int is
@@ -58,14 +49,18 @@ if (isset($_SESSION['cart']) && $_SESSION['cart'] instanceof ShoppingCart) {
 }
 
 // Product‑object maken (nu nog zonder database)
-$product = new Product($name, $imageUrl, $price);
+$product = new Product($name, $imageUrl);
 
 // OrderRow maken en aan cart toevoegen
 $orderRow = new OrderRow($product, $quantity);
 $cart->addOrderRow($orderRow);
 
-// Terug naar winkelwagen of productpagina
-header('Location: ' . BASE_URL . '/views/cartPopup.view.php');
+// HIER: cart terug in de sessie stoppen
+$_SESSION['cart'] = $cart;
+
+
+// Terug naar webshop waar winkelwagen popup getoond gaat worden
+header('Location: ' . BASE_URL . '/webshop.page.php?cart=updated');
 exit;
 
 // exit sluit alleen het lopende PHP‑script af, niet de sessie zelf. De sessiegegevens blijven gewoon bewaard zolang je ze niet expliciet vernietigt.

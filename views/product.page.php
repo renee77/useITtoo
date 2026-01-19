@@ -2,7 +2,6 @@
 require_once dirname(__DIR__) . '/inc/variables.inc.php';   // waar BASE_PATH/BASE_URL staan dirname(__DIR__) gaat een map omhoog
 require_once BASE_PATH . '/views/header.view.php';
 require_once BASE_PATH . '/inc/functions.inc.php';
-require_once BASE_PATH . '/inc/variables.inc.php';
 require_once BASE_PATH . '/classes/Product.php';
 
 
@@ -43,21 +42,20 @@ $product = $_GET['product'] ?? null;
                     <p>Prijs: <span><?= number_format($product->getPrice(), 2, ',', '.') ?></span> Euro</p>
 
 
-                    <!-- Na klikken gaat de browser naar add_to_cart.php met POST‑data: name, price, quantity -->
-                    <form id="order" action="<?= BASE_URL ?>/controllers/add_to_cart.php" method="post">
+                    <!-- Na klikken gaat de browser naar add_to_cart.php met POST‑data: name, quantity -->
+                    <form id="order" action="<?= BASE_URL ?>/controllers/addToCart.controller.php" method="post">
                         <!-- productgegevens meegeven  dit is nu een tijdelijke oplossing omdat we nog geen db hebben
                          normaal geef je het product_id mee  In add_to_cart.php haal je het product uit de database:
                          (SELECT * FROM products WHERE id = ?) en maakt daarvan een Product‑object.
                          Dat object stop je in een OrderRow-->
                         <input type="hidden" name="name" value="<?= htmlspecialchars($product->getName()) ?>">
-                        <input type="hidden" name="price" value="<?= htmlspecialchars($product->getPrice()) ?>">
                         <input type="hidden" name="imageUrl" value="<?= htmlspecialchars($product->getImageUrl()) ?>">
 
                         <div class="quantity">
                             <!-- minus and plus get type button, because they are not allowed to submit the form -->
-                            <button class="dark-button minus" type="button">-</button>
+                            <button class="dark-button minus" type="button" aria-label="Verminder aantal">-</button>
                             <input id="qty" name="quantity" type="number" value="1" min="1">
-                            <button class="dark-button plus" type="button">+</button>
+                            <button class="dark-button plus" type="button" aria-label="Verhoog aantal">+</button>
                         </div>
 
                         <button type="submit" class="orange-button shoppingcart">

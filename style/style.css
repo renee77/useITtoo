@@ -54,6 +54,10 @@ h5 {
   color: var(--dark-green);
 }
 
+h6 {
+  color: var(--dark-green);
+}
+
 .apa {
   font-size: 0.5rem;
 }

@@ -1,9 +1,17 @@
 <?php
+error_log('WEBSHOP SESSION ID: ' . session_id());
+
+session_start();
+if (isset($_GET['cart'])) {
+    error_log(print_r($_SESSION['cart'], true)); // Check server logs
+}
 // always  create a main path above each file 
 require_once __DIR__ . '/inc/variables.inc.php';   // waar BASE_PATH/BASE_URL staan
 require_once BASE_PATH . '/views/header.view.php';
 require_once BASE_PATH . '/inc/functions.inc.php';
 require_once BASE_PATH . '/inc/variables.inc.php';
+
+
 ?>
 
 <section id="categoriesBackGround">
