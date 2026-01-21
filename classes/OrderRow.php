@@ -33,4 +33,9 @@ class OrderRow
     {
         return $this->product->getPrice() * $this->quantity;
     }
+
+    public function increaseQuantity(int $amount): void
+    {
+        $this->quantity += $amount;
+    }
 }

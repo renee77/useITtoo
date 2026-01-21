@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 // Belangrijk:
 //   Zodra je session_start(); hebt aangeroepen, wordt de sessie‑data aan het eind van het script opgeslagen (bij script‑einde of bij session_write_close()); daarna mag exit; komen zonder probleem.​
 //   De sessie wordt pas echt beëindigd als je session_destroy() (en evt. cookie wissen) aanroept, niet door exit; of header('Location: ...')
@@ -22,6 +22,7 @@ require_once BASE_PATH . '/classes/OrderRow.php';
 require_once BASE_PATH . '/classes/ShoppingCart.php';
 require_once BASE_PATH . '/inc/functions.inc.php';
 
+session_start();
 // hier komt dan de logica om $_POST in te lezen en de cart bij te werken
 
 // Input ophalen en valideren
@@ -58,6 +59,7 @@ $cart->addOrderRow($orderRow);
 // HIER: cart terug in de sessie stoppen
 $_SESSION['cart'] = $cart;
 
+error_log(print_r($_SESSION['cart']->getOrderRows(), true));
 
 // Terug naar webshop waar winkelwagen popup getoond gaat worden
 header('Location: ' . BASE_URL . '/webshop.page.php?cart=updated');

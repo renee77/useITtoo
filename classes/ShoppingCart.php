@@ -18,8 +18,23 @@ class ShoppingCart
     }
 
     // methods
-    public function addOrderRow(OrderRow $row): void
+    public function addOrderRow(OrderRow $newRow): void
     {
-        $this->orderRows[] = $row;
+        // save name for check if product is already in orderRows --> nu met naam straks met ID vd db
+        $productName = $newRow->getProduct()->getName();
+
+        // Does product already exists in orderRows
+        foreach ($this->orderRows as $existingRow) {
+            if ($existingRow->getProduct()->getName() === $productName) {
+                // quantity verhogen
+                $existingRow->increaseQuantity($newRow->getQuantity());
+                return;
+            }
+
+            // add new-product row
+            $this->orderRows[] = $newRow;
+        }
+
+        $this->orderRows[] = $newRow;
     }
 }

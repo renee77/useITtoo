@@ -190,5 +190,27 @@ div#cart-popup {
         font-size: 1.2rem;
     }
 
+    div.orderrow {
+        display: flex;
+        justify-content: space-between;
+
+
+        img {
+            display: block;
+            width: 4rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        button.delete {
+            width: 15px;
+            height: 20px;
+            font-size: 1rem;
+            padding: 0;
+            padding-bottom: 2px;
+        }
+    }
+
 
 }

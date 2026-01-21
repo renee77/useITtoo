@@ -1,9 +1,5 @@
 <?php
 
-
-error_log('POPUP SESSION ID: ' . session_id());
-error_log(print_r($_SESSION, true));
-
 require_once dirname(__DIR__) . '/inc/variables.inc.php';
 require_once BASE_PATH . '/classes/ShoppingCart.php';
 require_once BASE_PATH . '/classes/OrderRow.php';
@@ -35,12 +31,11 @@ $cart = $_SESSION['cart'] ?? null;
                     <img src="<?= BASE_URL ?>/images/webshopImages/<?= htmlspecialchars($row->getProduct()->getImageUrl()) ?>"
                         alt="<?= htmlspecialchars($row->getProduct()->getName()) ?>">
                     <div class="details">
-                        <h6><?= htmlspecialchars(ucfirst($row->getProduct()->getName())) ?></h6>
-                        <p><?= $row->getQuantity() ?> x €<?= number_format($row->getProduct()->getPrice(), 2, ',', '.') ?>
-                            <span>€<?= number_format($row->getQuantity() * $row->getProduct()->getPrice(), 2, ',', '.') ?></span>
-                        </p>
+                        <h4><?= htmlspecialchars(ucfirst($row->getProduct()->getName())) ?></h4>
+                        <p><?= $row->getQuantity() ?> x €<?= number_format($row->getProduct()->getPrice(), 2, ',', '.') ?></p>
                     </div>
-                    <button class="dark-button close">x</button>
+                    <p>€<?= number_format($row->getQuantity() * $row->getProduct()->getPrice(), 2, ',', '.') ?></p>
+                    <button class="dark-button delete">x</button>
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
