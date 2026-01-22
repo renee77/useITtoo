@@ -46,7 +46,9 @@
 
 <?php if (isset($_GET['cart']) && $_GET['cart'] === 'updated') : ?>
     <script>
-        document.addEventListener('DOMContentLoaded', openCartPopup);
+        document.addEventListener('DOMContentLoaded', () => {
+            openPopup('<?= BASE_URL ?>/views/cartPopup.view.php', 'cartPopUp-container');
+        })
     </script>
 <?php endif; ?>
 </body>

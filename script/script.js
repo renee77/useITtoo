@@ -14,10 +14,10 @@ if (buttonPlus) {
   });
 }
 
-// code for showing cart popup
-async function openCartPopup() {
+// code for showing popup
+async function openPopup(url, containerID) {
   try {
-    const response = await fetch("/backend/views/cartPopup.view.php", {
+    const response = await fetch(url, {
       credentials: "same-origin",
     });
     if (!response.ok) {
@@ -25,30 +25,9 @@ async function openCartPopup() {
     }
 
     const html = await response.text();
-    const container = document.getElementById("cartPopUp-container");
+    const container = document.getElementById(containerID);
     container.innerHTML = html;
     container.style.display = "block";
-
-    // sluiten via overlay of X-knoppen - NU pas event listeners toevoegen
-    const overlay = container.querySelector(".popup-overlay");
-    const closeButtons = container.querySelectorAll(".dark-button.close");
-
-    if (overlay) {
-      overlay.addEventListener("click", closePopup);
-    }
-
-    closeButtons.forEach((btn) => {
-      btn.addEventListener("click", closePopup);
-    });
-
-    function closePopup() {
-      container.innerHTML = "";
-      container.style.display = "none";
-    }
-
-    // Add to openCartPopup() for debugging
-    console.log("Fetched HTML length:", html.length);
-    console.log("Cart container:", container);
   } catch (err) {
     console.error(err);
   }
