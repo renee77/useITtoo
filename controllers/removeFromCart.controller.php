@@ -27,5 +27,5 @@ $cart->removeOrderRowByIndex($index);
 $_SESSION['cart'] = $cart;
 
 // zelfde querystring als bij addToCart, zodat popup toont
-header('Location: ' . BASE_URL . '/webshop.page.php?cart=updated');
+header('Location: ' . BASE_URL . '/webshop.page.php?popup=cart');
 exit;

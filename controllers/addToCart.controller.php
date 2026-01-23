@@ -62,7 +62,7 @@ $_SESSION['cart'] = $cart;
 error_log(print_r($_SESSION['cart']->getOrderRows(), true));
 
 // Terug naar webshop waar winkelwagen popup getoond gaat worden
-header('Location: ' . BASE_URL . '/webshop.page.php?cart=updated');
+header('Location: ' . BASE_URL . '/webshop.page.php?popup=cart');
 exit;
 
 // exit sluit alleen het lopende PHP‑script af, niet de sessie zelf. De sessiegegevens blijven gewoon bewaard zolang je ze niet expliciet vernietigt.

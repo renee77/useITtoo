@@ -40,14 +40,14 @@
 
 
 
-<div id="cartPopUp-container"></div>
+<div id="popUp-container"></div>
 
 <script src="<?= BASE_URL ?>/script/script.js"></script>
 
-<?php if (isset($_GET['cart']) && $_GET['cart'] === 'updated') : ?>
+<?php if (isset($_GET['popup']) && $_GET['popup'] === 'cart') : ?>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            openPopup('<?= BASE_URL ?>/views/cartPopup.view.php', 'cartPopUp-container');
+            openPopup('<?= BASE_URL ?>/views/cartPopup.view.php', 'popUp-container');
         })
     </script>
 <?php endif; ?>
