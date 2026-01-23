@@ -44,11 +44,4 @@
 
 <script src="<?= BASE_URL ?>/script/script.js"></script>
 
-<?php if (isset($_GET['popup']) && $_GET['popup'] === 'cart') : ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            openPopup('<?= BASE_URL ?>/views/cartPopup.view.php', 'popUp-container');
-        })
-    </script>
-<?php endif; ?>
 </body>

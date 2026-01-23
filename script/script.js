@@ -55,27 +55,33 @@ async function openPopup(url, containerID) {
   }
 }
 
+document.querySelector("#winkelwagenLogo").addEventListener("click", () => {
+  // pad is lokaal!!!
+  openPopup("/backend/views/cartPopup.view.php", "popUp-container");
+});
+
 // algemene handler voor GET-params → popup
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const params = new URLSearchParams(window.location.search);
-//   const popupType = params.get("popup"); // bv. ?popup=cart
-//   // als de URL ...?popup=cart is, dan wordt cartPopup.view.php via openPopup ingeladen.
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const popupType = params.get("popup"); // bv. ?popup=cart
+  // als de URL ...?popup=cart is, dan wordt cartPopup.view.php via openPopup ingeladen.
 
-//   if (!popupType) return;
+  if (!popupType) return;
 
-//   const base = "<?= BASE_URL ?>/views/";
+  // pad is hier lokaal ingesteld !!!
+  const base = "/backend/views/";
 
-//   const map = {
-//     cart: "cartPopup.view.php",
-//     login: "loginPopup.view.php",
-//     newsletter: "newsletterPopup.view.php",
-//     // later: andere popups
-//   };
+  const map = {
+    cart: "cartPopup.view.php",
+    login: "loginPopup.view.php",
+    newsletter: "newsletterPopup.view.php",
+    // later: andere popups
+  };
 
-//   const file = map[popupType];
+  const file = map[popupType];
 
-//   if (file) {
-//     openPopup(base + file, "popUp-container");
-//   }
-// });
+  if (file) {
+    openPopup(base + file, "popUp-container");
+  }
+});
