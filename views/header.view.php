@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?= BASE_URL ?>/style/header.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>/style/footer.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>/style/webshop.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/style/cart.css">
 </head>
 
 <body>

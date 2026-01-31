@@ -131,23 +131,22 @@ button {
       outline: none;
     }
   }
+}
 
-  /* every section is below the other */
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+/* every section is below the other */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+/* to make sure if a page is not completely filled header and footer are corectly placed */
+html {
+  height: 100%;
+}
 
-  /* to make sure if a page is not completely filled header and footer are corectly placed */
-  html {
-    height: 100%;
-  }
-
-  main {
-    flex: 1;
-  }
+main {
+  flex: 1;
 }
 
 /* logo has same size everywhere */

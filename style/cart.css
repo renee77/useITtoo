@@ -1,0 +1,119 @@
+h1 {
+  padding-top: 3rem;
+}
+
+section#gridBox {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/*ORDER ROW*/
+#orderRow {
+  padding: 1rem 0;
+  grid-column: 1 / 2;
+  display: flex;
+  gap: 1rem;
+
+  .imageBox {
+    width: 170px;
+
+    img {
+      object-fit: cover;
+      width: 170px;
+      height: 140px;
+      border-radius: 30px;
+    }
+  }
+
+  .orderRowInformationBox{
+    align-items: left;
+    padding-left: 10px;
+  }
+
+  .orderRowTitle {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    font-weight: bold;
+  }
+  .orderRowTotalBox {
+    padding-top: 5px;
+    font-size: 1.1rem;
+    max-width: 130px;
+    display: flex;
+  }
+
+  .orderRowInfo {
+    padding-bottom: 1rem;
+  }
+
+}
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden; 
+
+  button {
+    width: 36px;
+    height: 36px;
+    background-color: var(--dark-green);
+    color: var(--white);
+    border: 1px solid var(--onyx);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input {
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+
+}
+
+/*TOTAAL*/
+#totalBox {
+  background-color: var(--light-green);
+  grid-column: 2 / 3;
+  grid-row: 1 / 5;
+  padding: 2rem;
+  min-height: 60vh;
+  max-height: 100vh;
+  border-radius: 10px;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--orange);
+
+  p {
+    padding: 5px 0;
+  }
+}
+
+.deleteBtn {
+  max-width: 28px;
+  max-height: 28px;
+  margin-left: 5px;
+  border: none;
+  background-color: var(--light-green);
+  cursor: pointer;
+  transition: background-color, 0.3s;
+}
+
+.deleteBtn:hover {
+  background-color: var(--dark-green);
+  cursor: pointer;
+}
