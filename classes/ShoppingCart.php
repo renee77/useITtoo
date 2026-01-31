@@ -30,11 +30,20 @@ class ShoppingCart
                 $existingRow->increaseQuantity($newRow->getQuantity());
                 return;
             }
-
-            // add new-product row
-            $this->orderRows[] = $newRow;
         }
 
         $this->orderRows[] = $newRow;
+    }
+
+    public function removeOrderRowByIndex(int $index): void
+    {
+        if (!isset($this->orderRows[$index])) {
+            return;
+        }
+
+        unset($this->orderRows[$index]);
+
+        // indexes opnieuw netjes maken
+        $this->orderRows = array_values($this->orderRows);
     }
 }

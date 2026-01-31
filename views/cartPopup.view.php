@@ -14,8 +14,9 @@ $cart = $_SESSION['cart'] ?? null;
 ?>
 
 
+
 <div class="popup-overlay">
-    <div id="cart-popup">
+    <div id="cart-popup" class="popup">
         <div class="miniHeader">
             <img src="<?= BASE_URL ?>/images/donker-logo.png" class="logo" alt="logo useITtoo">
             <button class="dark-button close">X</button>
@@ -26,7 +27,8 @@ $cart = $_SESSION['cart'] ?? null;
         <?php if (!$cart instanceof ShoppingCart || empty($cart->getOrderRows())): ?>
             <p>Je winkelwagen is leeg.</p>
         <?php else: ?>
-            <?php foreach ($cart->getOrderRows() as $row): ?>
+            <!-- later wordt voor $index de index uit de db gebruikt -->
+            <?php foreach ($cart->getOrderRows() as $index => $row): ?>
                 <div class="orderrow">
                     <img src="<?= BASE_URL ?>/images/webshopImages/<?= htmlspecialchars($row->getProduct()->getImageUrl()) ?>"
                         alt="<?= htmlspecialchars($row->getProduct()->getName()) ?>">
@@ -35,7 +37,13 @@ $cart = $_SESSION['cart'] ?? null;
                         <p><?= $row->getQuantity() ?> x €<?= number_format($row->getProduct()->getPrice(), 2, ',', '.') ?></p>
                     </div>
                     <p>€<?= number_format($row->getQuantity() * $row->getProduct()->getPrice(), 2, ',', '.') ?></p>
-                    <button class="dark-button delete">x</button>
+
+                    <!-- form om te zorgen dat de delete button een orderrow uit de winkelwagen kan verwijderen dmv van een post operatie -->
+
+                    <form method="post" action="<?= BASE_URL ?>/controllers/removeFromCart.controller.php">
+                        <input type="hidden" name="rowIndex" value="<?= $index ?>">
+                        <button type="submit" class="dark-button delete">x</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
