@@ -31,3 +31,25 @@ function renderProductSection(string $categorie, array $products, string $arrayN
     }
     echo '</div>'; // close .shop
 }
+
+
+
+
+function renderRecipes (array $recipes, string $arrayName) {
+      foreach ($recipes as $recipeName => $recipeInfo) {
+        $image = $recipeInfo[0];
+        $imageSrc = BASE_URL . '/images/recipeImages/' . rawurlencode($image);
+        $url = BASE_URL . '/views/recipe.page.php?' . http_build_query([
+          'recipe' => $recipeName,
+          'source' => $arrayName,
+        ]);
+        
+
+        echo '<div class="recipeBlock">';
+        echo '<a href="' . e($url) . '">';
+          echo '<img src="' . $imageSrc . '">';
+          echo '<h4>' . e($recipeName) . '</h4>';
+        echo '</a>';
+        echo '</div>';
+      }
+    }

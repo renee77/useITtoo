@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= BASE_URL ?>/style/footer.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>/style/webshop.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>/style/cart.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/style/recipes.css">
 </head>
 
 <body>
