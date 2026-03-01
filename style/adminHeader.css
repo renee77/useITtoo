@@ -1,0 +1,85 @@
+body {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  height: 100vh;
+}
+header {
+  background-color: var(--dark-green);
+
+  img {
+    width: 20vw;
+    max-width: 200px;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .navList {
+    color: white;
+    padding: 0.4rem 0;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .navLinks {
+    color: var(--white);
+    display: inline;
+  }
+
+  .navSubMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+  }
+
+  .navSubList {
+    padding: 0.2rem 0;
+  }
+
+  .navSubLinks {
+    color: white;
+    margin-left: 1rem;
+
+  }
+
+  .selected {
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .logOut {
+    padding-top: 2rem;
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+}
+
+
+/*HOVERS*/
+.navList:hover {
+  cursor: pointer;
+}
+.navList:hover .navSubMenu {
+  max-height: 200px;
+}
+
+.navSubList:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  border-radius: 0.1rem;
+}
+
+.navSubLinks:hover {
+  background-color: none;
+}
+
+.logOut:hover {
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+  }
+}
