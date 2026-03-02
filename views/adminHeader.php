@@ -9,6 +9,7 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
   <title>Dashboard ||UseITtoo</title>
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/style.css">
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminHeader.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminCreate.css">
 </head>
 <body>
   <header>
@@ -124,7 +125,3 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
     </ul>
   </header>
   <main>
-
-  </main>
-</body>
-</html>

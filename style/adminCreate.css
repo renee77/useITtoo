@@ -1,0 +1,64 @@
+main {
+  width: 90%;
+  margin: auto;
+}
+
+h1 {
+  padding-bottom: 3rem;
+}
+
+.form__group {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.form__groupInput,
+.form__groupLabel {
+  display: block;
+  background-color: white;
+  border: 0.125rem solid var(--orange);
+  letter-spacing: 0.1em;
+}
+
+.form__groupLabel { 
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  border-right-width: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.form__groupInput {
+  flex: 1 0 10rem;
+
+  border-left-width: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  
+  padding: 0.5rem 1rem 0.5rem 0.001rem;
+}
+
+.form__groupInput:focus {
+  outline: none;
+  border: 0.125rem solid var(--orange);
+  border-left: none;
+}
+
+.saveBtn {
+  margin: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  font-weight: bold;
+  border-radius: 1rem;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.saveBtn:hover {
+  background-color: var(--dark-orange);
+  border: 1px solid var(--dark-orange);
+  cursor: pointer;
+}
