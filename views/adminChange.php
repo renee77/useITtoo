@@ -1,5 +1,5 @@
 <?php require_once __DIR__ . '/adminHeader.php'; ?>
-    <h1>Product Aanmaken</h1>
+    <h1>Product Wijzigen</h1>
     <div class="form__group">
       <label class="form__groupLabel" for="naam">Naam:</label>
       <input class="form__groupInput" type="text" id="naam" name="naam" required />
@@ -36,6 +36,8 @@
     </div>
 
     <input type="submit" value="Opslaan" class="orangeBtn btn"/>
+
+    <input type="submit" value="Verwijderen" class="deleteBtn btn"/>
   </main>
 </body>
 </html>

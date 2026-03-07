@@ -11,6 +11,7 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminHeader.css">
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminCreate.css">
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminOverview.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminChange.css">
 </head>
 <body>
   <header>
@@ -32,11 +33,6 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
               Product wijzigen
             </a>
           </li>
-          <li class="navSubList">
-            <a href="#" class="navSubLinks">
-              Product verwijderen
-            </a>
-          </li>
         </ul>
       </li>
       <li class="navList">
@@ -50,11 +46,6 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
           <li class="navSubList">
             <a href="#" class="navSubLinks">
               Categorie wijzigen
-            </a>
-          </li>
-          <li class="navSubList">
-            <a href="#" class="navSubLinks">
-              Categorie verwijderen
             </a>
           </li>
         </ul>
@@ -72,11 +63,6 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
               Tags wijzigen
             </a>
           </li>
-          <li class="navSubList">
-            <a href="#" class="navSubLinks">
-              Tags verwijderen
-            </a>
-          </li>
         </ul>
       </li>
       <li class="navList">
@@ -92,11 +78,6 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
               Acties wijzigen
             </a>
           </li>
-          <li class="navSubList">
-            <a href="#" class="navSubLinks">
-              Acties verwijderen
-            </a>
-          </li>
         </ul>
       </li>
       <li class="navList">
@@ -110,11 +91,6 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
           <li class="navSubList">
             <a href="#" class="navSubLinks">
               Recept wijzigen
-            </a>
-          </li>
-          <li class="navSubList">
-            <a href="#" class="navSubLinks">
-              Recept verwijderen
             </a>
           </li>
         </ul>

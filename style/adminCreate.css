@@ -7,6 +7,10 @@ h1 {
   padding-bottom: 3rem;
 }
 
+#omschrijving {
+  min-height: 1rem;
+}
+
 .form__group {
   display: flex;
   margin-bottom: 1rem;
@@ -53,18 +57,23 @@ h1 {
   border-right: none;
 }
 
-.saveBtn {
+.btn {
   margin: auto;
   padding: 0.5rem 1rem;
-  background-color: var(--orange);
-  border: 1px solid var(--orange);
   font-weight: bold;
   border-radius: 1rem;
   transition: background-color 0.3s, border 0.3s;
 }
 
-.saveBtn:hover {
+.orangeBtn {
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+.orangeBtn:hover {
   background-color: var(--dark-orange);
   border: 1px solid var(--dark-orange);
-  cursor: pointer;
 }

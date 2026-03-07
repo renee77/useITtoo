@@ -3,7 +3,7 @@
   <input type="submit" value="Nieuw Product aanmaken" class="saveBtn newBtn" />
   <div id="search">
     <input type="text" placeholder="Typ de productnaam in." class="searchbar">
-    <input type="Submit" value="Zoeken" class="saveBtn" />
+    <input type="Submit" value="Zoeken" class="orangeBtn btn" />
   </div>
 
   <table>
@@ -22,7 +22,7 @@
         <td>Leverancier hier</td>
         <td>Gewicht</td>
         <td>Omschrijving hier</td>
-        <td><input value=">>" type="submit" class="saveBtn toProductBtn" /></td>
+        <td><input value=">>" type="submit" class="orangeBtn btn toProductBtn" /></td>
       </tr>
       <tr>
         <td>Naam hier</td>
@@ -30,7 +30,7 @@
         <td>Leverancier hier</td>
         <td>Gewicht</td>
         <td>Omschrijving hier</td>
-        <td><input value=">>" type="submit" class="saveBtn toProductBtn" /></td>
+        <td><input value=">>" type="submit" class="orangeBtn btn toProductBtn" /></td>
       </tr>
     </tbody>
   </table>
