@@ -10,6 +10,7 @@ require_once BASE_PATH . '/inc/functions.inc.php' ?>
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/style.css">
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminHeader.css">
   <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminCreate.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/style/adminOverview.css">
 </head>
 <body>
   <header>

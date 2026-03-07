@@ -38,13 +38,19 @@ h1 {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   
-  padding: 0.5rem 1rem 0.5rem 0.001rem;
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 
 .form__groupInput:focus {
   outline: none;
-  border: 0.125rem solid var(--orange);
+  border: 0.125rem solid var(--light-green);
   border-left: none;
+}
+
+.form__groupLabel:has(+ .form__groupInput:focus) {
+  outline: none;
+  border: 0.125rem solid var(--light-green);
+  border-right: none;
 }
 
 .saveBtn {

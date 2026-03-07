@@ -1,0 +1,56 @@
+main {
+  margin: 2rem 0 0 2rem;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+.newBtn {
+  min-width: 100%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.searchbar {
+  display: inline-block;
+  width: 80%;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--orange);
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  border: 3px solid white;
+  padding: 0.5rem 0 0.5rem 0.2rem;
+}
+
+th {
+  background-color: var(--light-green);
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.tableSupplier {
+  width: 15%;
+}
+
+.tableWeight,
+.tablePrice {
+  width: 10%;
+}
+
+.tableLink {
+  width: 1%;
+}
+
+.toProductBtn {
+  font-size: 0.6rem;
+}
